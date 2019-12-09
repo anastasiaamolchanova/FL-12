@@ -1,9 +1,5 @@
 @media print {
 
-    .tm-banner-text {
-        animation: none !important;
-    }
-
     .tm-sidebar,
     .box-img,
     .img-contact-us,
@@ -83,7 +79,6 @@
     .tm-team-description-container {
         max-width: 100%;
         text-align: center;
-
     }
 
     .blocks .tm-team-description-container .tm-section-description:last-child {
@@ -105,10 +100,7 @@
     footer {
         padding: 10px 0 0 0;
     }
-
 }
-
-
 
 .tm-nav-item:hover .tm-nav-item-link {
     background-color: lightskyblue;
@@ -123,18 +115,20 @@
     background-color: #fff;
 }
 
-.tm-banner-text {
-    text-shadow: 4px 5px 3px #333;
-    animation: 3s infinite movingleft;
-}
-
-@keyframes movingleft {
-    0% {
-        transform: translateX(200px);
+@media screen {
+    .tm-banner-text {
+        text-shadow: 4px 5px 3px #333;
+        animation: 3s infinite movingleft;
     }
 
-    100% {
-        transform: translateX(0px);
+    @keyframes movingleft {
+        0% {
+            transform: translateX(200px);
+        }
+
+        100% {
+            transform: translateX(0px);
+        }
     }
 }
 
