@@ -6,6 +6,8 @@
     #contact,
     .heading ol li .text::after,
     section::before,
+    .heading li:nth-child(1)::after,
+    .heading li:nth-child(3)::after,
     .box-work,
     .carousel-indicators,
     img[src*="epam-mexico"] {
@@ -154,7 +156,6 @@
 .heading li {
     list-style-type: lower-alpha;
 }
-
 
 .heading li:hover::before {
     content: ">";
