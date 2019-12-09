@@ -143,6 +143,7 @@
 
 .tm-box-bg-title:hover {
     background-color: lightgrey;
+    font-style: italic;
 }
 
 .heading h2 {
@@ -154,19 +155,31 @@
     list-style-type: lower-alpha;
 }
 
-.heading a:hover:before {
+
+.heading li:hover::before {
     content: ">";
+    text-decoration: none;
 }
 
 .text {
     font-weight: bold;
 }
 
-.text::after {
+.heading li:nth-child(1)::after,
+.heading li:nth-child(3)::after {
     content: "New";
+    font-weight: bold;
     color: red;
     vertical-align: top;
     font-size: 11px;
+}
+
+.text::after:hover {
+    text-decoration: none;
+}
+
+a:hover::before {
+    text-decoration: none;
 }
 
 .blocks .tm-team-description-container .tm-section-description:last-child {
