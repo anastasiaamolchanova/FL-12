@@ -1,0 +1,157 @@
+body {
+    min-width: 900px;
+    margin: 0;
+}
+
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/img/home-bg.jpg) top no-repeat;
+    background-size: cover;
+    min-width: 900px;
+    height: 800px;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.navigation {
+    height: 86px;
+    background-color: #ffff;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+.nav-heading {
+    color: #555555;
+    letter-spacing: 1px;
+}
+
+.navigation ul {
+    display: flex;
+    list-style: none;
+    margin-top: 25px;
+}
+
+.navigation ul li {
+    padding-left: 40px;
+}
+
+.navigation ul a:hover {
+    color: #bfba55;
+}
+
+.navigation ul a {
+    text-decoration: none;
+    color: #898884;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.main-heading {
+    text-align: center;
+    font-size: 70px;
+    margin-bottom: 0;
+}
+
+.epam-txt {
+    text-align: center;
+    font-size: 17px;
+    color: #bfba55;
+}
+
+.btn-header {
+    align-self: center;
+    color: #747774;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: bold;
+    width: 160px;
+    height: 45px;
+    border: 0px;
+    border-radius: 40px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 30px;
+}
+
+.content {
+    margin: 110px auto;
+    width: 945px;
+}
+
+.post-img {
+    max-width: 945px;
+}
+
+.post h1 {
+    margin-bottom: 5px;
+}
+
+.post .user-info {
+    display: flex;
+}
+
+.post .user-info p {
+    padding-left: 15px;
+    color: #606168;
+    font-size: 18px;
+}
+
+.post .avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.post-descr {
+    color: #898884;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 35px;
+}
+
+.btn-post {
+    width: 190px;
+    height: 50px;
+    border: 1px solid #cccccc;
+    border-radius: 30px;
+    background-color: #ffff;
+    color: #898884;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 50px;
+}
+
+hr {
+    border: 1px solid #f0f0f0;
+    margin-bottom: 70px;
+}
+
+footer {
+    height: 357px;
+    background-color: black;
+    color: white;
+}
+
+.footer-wrapper {
+    max-width: 1260px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding-top: 70px;
+}
+
+#about {
+    width: 400px;
+    line-height: 1.5;
+}
+
+.footer-wrapper p {
+    color: #898884
+}
