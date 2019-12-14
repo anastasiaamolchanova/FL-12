@@ -1,33 +1,22 @@
-//unset
 $m0: 0;
 $bodyWidth: 1920px;
-//body
+$bodyBg: #21232e;
+
 $paddingLeftLogo: 193px;
-//Header
-$headerBgImg: url(../img/m-h-day.jpg) center no-repeat;
+
+$headerBgImg: url(../img/m-h-night.jpg) center no-repeat;
 $headerBgSz: cover;
-
-
-
-
-
-
-
 
 $borderRadius: 5px;
 $regularTextColor: #c0c3ce;
-$markColor: #14a0c7;
+$markColor: #ff4e33;
 
+$Sectfootbcolor:#3b3f50;
+$headingsColor: #ffffff;
+$sectHeadingColor: #ffffff;
 
+$btnBgColor: #e3ac00;
 
-
-$Sectfootbcolor:rgb(33, 35, 46);
-$headingsColor: rgba(44, 47, 58, 1);
-
-
-
-
-$btnBgColor: #699900;
-
+$bannerBg: linear-gradient(90deg, #dfa505 0%, #96324f 100%);
 
 $whiteFont: #fff;
