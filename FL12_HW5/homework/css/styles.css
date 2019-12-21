@@ -1,15 +1,3 @@
-/*
- * Feel free to change name of colors if you need it
- * Feel free to add new colors if you need it
- */
-:root {
-  --bg-color--dark: #0b192f;
-  --bg-color--header: #024161;
-  --link: #fff;
-  --link--hover: #1f52a4;
-  --bg-footer-color: #024161;
-}
-
 .post-1 {
   background: #9d27b0;
 }
@@ -110,7 +98,7 @@ p {
 }
 
 .navigation .nav-item:hover {
-  background-color: rgba(62, 118, 223, 0.658);
+  background-color: #1f52a4;
   transition-duration: 1s;
   cursor: pointer;
 }
@@ -157,7 +145,6 @@ p {
 .post-img:hover,
 .text-wrapper:hover {
   opacity: 0.6;
-  -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
   cursor: pointer;
 }
