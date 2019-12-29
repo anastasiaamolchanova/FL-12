@@ -1,3 +1,4 @@
+/* eslint-disable no-magic-numbers */
 let game = confirm('Do you want to play a game?');
 let i = 0;
 let userNumber;
