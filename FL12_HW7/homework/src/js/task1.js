@@ -34,6 +34,7 @@ if (changePass === null) {
     let oldPass = prompt('Enter old password');
     if (oldPass === '' || oldPass === null) {
         alert('Canceled');
+        // eslint-disable-next-line max-len
     } else if (log === emails.user && oldPass === passwords.uPass || log === emails.admin && oldPass === passwords.aPass) {
         let newPass = prompt('Enter new password');
         if (newPass === '' || newPass === null) {
