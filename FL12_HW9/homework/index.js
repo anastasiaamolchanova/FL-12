@@ -1,141 +1,143 @@
-//1
+  /* eslint-disable no-magic-numbers */
 
-function convert() {
-    let myArr = [];
-    for (let index = 0; index < arguments.length; index++) {
-        if (typeof arguments[index] === 'string') {
-            arguments[index] = parseInt(arguments[index]);
-        } else if (typeof arguments[index] === 'number') {
-            arguments[index] = arguments[index].toString();
-        }
-        myArr.push(arguments[index]);
-    }
-    console.log(myArr);
-}
-convert('2', 5, '5');
+  //1
 
-//2
+  function convert() {
+      let myArr = [];
+      for (let index = 0; index < arguments.length; index++) {
+          if (typeof arguments[index] === 'string') {
+              arguments[index] = parseInt(arguments[index]);
+          } else if (typeof arguments[index] === 'number') {
+              arguments[index] = arguments[index].toString();
+          }
+          myArr.push(arguments[index]);
+      }
+      console.log(myArr);
+  }
+  convert('2', 5, '5');
 
-function executeforEach(arr, func) {
-    for (let i = 0; i < arr.length; i++) {
-        func(arr[i]);
-    }
-}
+  //2
 
-executeforEach([1, 2, 3], function (el) {
-    console.log(el * 2)
-});
+  function executeforEach(arr, func) {
+      for (let i = 0; i < arr.length; i++) {
+          func(arr[i]);
+      }
+  }
 
-//3
+  executeforEach([1, 2, 3], function (el) {
+      console.log(el * 2);
+  });
 
-function mapArray(arr, func) {
-    let newArray = [];
-    executeforEach(arr, function (el) {
-        newArray.push(func(parseInt(el)));
-    });
-    console.log(newArray);
-}
+  //3
 
-mapArray([2, '5', 8], function (el) {
-    return el + 3;
-});
+  function mapArray(arr, func) {
+      let newArray = [];
+      executeforEach(arr, function (el) {
+          newArray.push(func(parseInt(el)));
+      });
+      console.log(newArray);
+  }
 
-//4
+  mapArray([2, '5', 8], function (el) {
+      return el + 3;
+  });
 
-function filterArray(arr, func) {
-    let filteredArr = [];
-    executeforEach(arr, function (el) {
-        if (func(el)) {
-            filteredArr.push(el);
-        }
-    });
-    console.log(filteredArr);
-}
+  //4
 
-filterArray([2, 5, 8], function (el) {
-    return el % 2 === 0;
-});
+  function filterArray(arr, func) {
+      let filteredArr = [];
+      executeforEach(arr, function (el) {
+          if (func(el)) {
+              filteredArr.push(el);
+          }
+      });
+      console.log(filteredArr);
+  }
 
-//5
+  filterArray([2, 5, 8], function (el) {
+      return el % 2 === 0;
+  });
 
-function flipOver(str) {
-    let reversed = '';
-    for (let character of str) {
-        reversed = character + reversed;
-    }
-    console.log(reversed);
-}
+  //5
 
-flipOver('hey world')
+  function flipOver(str) {
+      let reversed = '';
+      for (let character of str) {
+          reversed = character + reversed;
+      }
+      console.log(reversed);
+  }
 
-//6 
+  flipOver('hey world');
 
-function makeListFromRange(nums) {
-    let list = [];
-    for (let i = nums[0]; i <= nums[1]; i++) {
-        list.push(i);
-    }
-    console.log(list);
-}
+  //6 
 
-makeListFromRange([2, 7]) // [2, 3, 4, 5, 6, 7]
+  function makeListFromRange(nums) {
+      let list = [];
+      for (let i = nums[0]; i <= nums[1]; i++) {
+          list.push(i);
+      }
+      console.log(list);
+  }
 
-//7
+  makeListFromRange([2, 7]); // [2, 3, 4, 5, 6, 7]
 
-const actors = [{
-        name: 'tommy',
-        age: 36
-    },
-    {
-        name: 'lee',
-        age: 28
-    }
-];
+  //7
 
-function getArrayOfKeys(arrName, arrKey) {
-    let actorsArr = [];
-    executeforEach(arrName, actor => actorsArr.push(actor[arrKey]));
-    console.log(actorsArr);
-}
+  const actors = [{
+          name: 'tommy',
+          age: 36
+      },
+      {
+          name: 'lee',
+          age: 28
+      }
+  ];
 
-getArrayOfKeys(actors, 'name');
+  function getArrayOfKeys(arrName, arrKey) {
+      let actorsArr = [];
+      executeforEach(arrName, actor => actorsArr.push(actor[arrKey]));
+      console.log(actorsArr);
+  }
 
-//8
+  getArrayOfKeys(actors, 'name');
 
-function substitute(arr) {
-    let numArray = [];
-    mapArray(arr, function (el) {
-        if (el < 30) {
-            el = '*';
-        }
-        numArray.push(el);
-    });
-    console.log(numArray);
-}
+  //8
 
-substitute([58, 14, 48, 2, 31, 29]);
+  function substitute(arr) {
+      let numArray = [];
+      mapArray(arr, function (el) {
+          if (el < 30) {
+              el = '*';
+          }
+          numArray.push(el);
+      });
+      console.log(numArray);
+  }
 
-//9
+  substitute([58, 14, 48, 2, 31, 29]);
 
-const date = new Date(2019, 0, 2);
+  //9
 
-function getPastDay(date, day) {
-    let mlSecs = 86400000;
-    console.log(new Date(date.getTime() - day * mlSecs).getDate());
-}
+  const date = new Date(2019, 0, 2);
 
-getPastDay(date, 1);
-getPastDay(date, 2);
-getPastDay(date, 365);
+  function getPastDay(date, day) {
+      let mlSecs = 86400000;
+      console.log(new Date(date.getTime() - day * mlSecs).getDate());
+  }
 
-// 10
+  getPastDay(date, 1);
+  getPastDay(date, 2);
+  getPastDay(date, 365);
 
-function formatDate(dateData) {
-    const ten = 10;
-    const hour = dateData.getHours() < ten ? '0' + dateData.getHours() : dateData.getHours();
-    const mins = dateData.getMinutes() < ten ? '0' + dateData.getMinutes() : dateData.getMinutes();
-    return `${dateData.getFullYear()}/${dateData.getMonth() + 1}/${dateData.getDate()} ${hour}:${mins}`;
-}
+  // 10
 
-formatDate(new Date('6/15/2018 09:15:00')) // "2018/6/15 09:15"
-formatDate(new Date()) // "2020/1/7 12:56" // gets current local time
+  function formatDate(dateData) {
+      const ten = 10;
+      const hour = dateData.getHours() < ten ? '0' + dateData.getHours() : dateData.getHours();
+      const mins = dateData.getMinutes() < ten ? '0' + dateData.getMinutes() : dateData.getMinutes();
+      return `${dateData.getFullYear()}/${dateData.getMonth() + 1}/${dateData.getDate()} ${hour}:${mins}`;
+  }
+
+  formatDate(new Date('6/15/2018 09:15:00')); // "2018/6/15 09:15"
+  formatDate(new Date()); // "2020/1/7 12:56" // gets current local time
