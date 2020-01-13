@@ -12,9 +12,9 @@
           }
           myArr.push(arguments[index]);
       }
-      console.log(myArr);
+      return myArr;
   }
-  convert('2', 5, '5');
+  console.log(convert('2', 5, '5'));
 
   //2
 
@@ -65,10 +65,10 @@
       for (let character of str) {
           reversed = character + reversed;
       }
-      console.log(reversed);
+      return reversed;
   }
 
-  flipOver('hey world');
+  console.log(flipOver('hey world'));
 
   //6 
 
@@ -77,10 +77,10 @@
       for (let i = nums[0]; i <= nums[1]; i++) {
           list.push(i);
       }
-      console.log(list);
+      return list;
   }
 
-  makeListFromRange([2, 7]); // [2, 3, 4, 5, 6, 7]
+  console.log(makeListFromRange([2, 7])); // [2, 3, 4, 5, 6, 7]
 
   //7
 
@@ -97,10 +97,10 @@
   function getArrayOfKeys(arrName, arrKey) {
       let actorsArr = [];
       executeforEach(arrName, actor => actorsArr.push(actor[arrKey]));
-      console.log(actorsArr);
+      return actorsArr;
   }
 
-  getArrayOfKeys(actors, 'name');
+  console.log(getArrayOfKeys(actors, 'name'));
 
   //8
 
@@ -112,10 +112,10 @@
           }
           numArray.push(el);
       });
-      console.log(numArray);
+      return numArray;
   }
 
-  substitute([58, 14, 48, 2, 31, 29]);
+  console.log(substitute([58, 14, 48, 2, 31, 29]));
 
   //9
 
@@ -123,12 +123,12 @@
 
   function getPastDay(date, day) {
       let mlSecs = 86400000;
-      console.log(new Date(date.getTime() - day * mlSecs).getDate());
+      return new Date(date.getTime() - day * mlSecs).getDate();
   }
 
-  getPastDay(date, 1);
-  getPastDay(date, 2);
-  getPastDay(date, 365);
+  console.log(getPastDay(date, 1));
+  console.log(getPastDay(date, 2));
+  console.log(getPastDay(date, 365));
 
   // 10
 
